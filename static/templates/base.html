@@ -65,6 +65,20 @@
     </div>
 
     <div class="container">
+      {% if messages %}
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            {% for m in messages %}
+            <div {% if m.tags == "success" %} class="alert alert-success alert-dismissible" role="alert" {% endif %}>
+               {# <p{% if m.tags == "success" %} class="alert alert-success alert-dismissible" role="alert" {% endif %}>{{ m }}</p> #}
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+               <strong>Success</strong> {{ m }}
+            </div>    
+            {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-sm-4">
