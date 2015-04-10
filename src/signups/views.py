@@ -17,3 +17,13 @@ def home(request):
     template = 'signup.html'
     return render_to_response(template, locals(),
                               context_instance=RequestContext(request))
+
+def thankyou(request):
+    template = 'thankyou.html'
+    return render_to_response(template, locals(),
+                              context_instance=RequestContext(request))
+
+def aboutus(request):
+    template = 'aboutus.html'
+    return render_to_response(template, locals(),
+                              context_instance=RequestContext(request))
