@@ -97,3 +97,20 @@ if DEBUG:
     STATICFILES_DIRS = (
         os.path.join(os.path.dirname(BASE_DIR), "static", "static"),
     )
+
+# For gmail / google apps
+
+from .email_info import EMAIL_HOST, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, \
+    EMAIL_PORT, EMAIL_BACKEND, EMAIL_USE_TLS, ACCOUNT_EMAIL_VERIFICATION
+
+DEFAULT_FROM_EMAIL = "Taiowa Waner <twaner23@gmail.com>"  # "Coding for Entrepreneuers <cfe@cfe.com>" to Add a name
+
+# sendgrid - transactional emails
+EMAIL_HOST = EMAIL_HOST
+EMAIL_HOST_USER = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+EMAIL_USE_TLS = EMAIL_USE_TLS  # contact provider
+EMAIL_PORT = EMAIL_PORT  # contact provider
+EMAIL_BACKEND = EMAIL_BACKEND
+ACCOUNT_EMAIL_VERIFICATION = ACCOUNT_EMAIL_VERIFICATION
+
