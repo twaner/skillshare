@@ -7,6 +7,7 @@ class Signup(models.Model):
     first_name = models.CharField(max_length=120, null=True, blank=True)
     last_name = models.CharField(max_length=120, null=True, blank=True)
     email = models.EmailField()
+    for_you = models.BooleanField(default=True, verbose_name="Is this purchase for you?")
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
     
@@ -16,4 +17,3 @@ class Signup(models.Model):
     
     def __str__(self):
         return smart_str(self.email)
-    
